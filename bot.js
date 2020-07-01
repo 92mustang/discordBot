@@ -40,4 +40,4 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 	//console.log(reaction.emoji.name + ' with reaction');
 });
 
-bot.login('Mjg4Mzk5MjY3NzEyOTkxMjMz.XvzeTQ.OwCCxFvHZKBKuqEzdi9iWB5LVvE');
+bot.login(process.env.BOT_TOKEN);
