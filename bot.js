@@ -1,13 +1,13 @@
 const Discord = require('discord.js');
 
-const client  = new Discord.Client();
+const bot = new Discord.Client();
 
-client.on('ready', function (evt) {
-    console.info('Logged in as ' + client.user.tag);
+bot.on('ready', function (evt) {
+    console.info('Logged in as ' + bot.user.tag);
 });
 
 
-client.on('messageReactionAdd', async (reaction, user) => {
+bot.on('messageReactionAdd', async (reaction, user) => {
 		// When we receive a reaction we check if the reaction is partial or not
 	if (reaction.partial) {
 		// If the message this reaction belongs to was removed the fetching might result in an API error, which we need to handle
@@ -36,4 +36,4 @@ client.on('messageReactionAdd', async (reaction, user) => {
 	//console.log(reaction.emoji.name + ' with reaction');
 });
 
-client.login(process.env.BOT_TOKEN);
+bot.login(process.env.BOT_TOKEN);
